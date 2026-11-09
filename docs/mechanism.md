@@ -102,8 +102,16 @@ expiry; a fully claimed distribution reclaims 0 and still closes;
 
 Every failure raises `UserError` **before any write**: a failed claim
 sets no claimed bit, credits nothing, and leaves the leaf claimable.
-A failed payable (zero value, past expiry, bad root) sends nothing —
-the value is rejected with the call. There are no ghost states.
+A failed payable call writes no state, but the platform keeps the
+attached value in the contract balance (proven on-chain by the
+failed-payable probe in `evidence.json`: a `create_distribution`
+with an invalid root and 1 wei failed, and the 1 wei stayed in the
+contract; `total_received_wei` does not count it and it is credited
+to nobody — `get_totals` exposes the difference between
+`contract_balance_wei` and `credits_outstanding_wei +
+escrow_locked_wei`). The only payable failure modes are creator
+input errors (bad root, past expiry, zero value), which the
+off-chain tooling validates before sending. There are no ghost states.
 
 ## Worst-case spread table
 
