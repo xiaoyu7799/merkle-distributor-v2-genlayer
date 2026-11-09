@@ -1,0 +1,828 @@
+{
+  "network": "Stable Studionet",
+  "chainId": 61999,
+  "rpcUrl": "https://studio.genlayer.com/api",
+  "contractAddress": "0x062E5A1ee60fc61Bc37aCEC24A5fB23F350968ea",
+  "deployTxHash": "0xbc3fd29add69d23b92d54edddcede064346af57a265619bf7b0aac20fbf1a989",
+  "contractFile": "contracts/merkle_distributor.py",
+  "contractSha256": "56885b49f1679ec6166450cbbeb9eded2e10549dadd2d2214cb861a6360ee101",
+  "deployedCodeSha256": "56885b49f1679ec6166450cbbeb9eded2e10549dadd2d2214cb861a6360ee101",
+  "deployedCodeMatchesSource": true,
+  "accounts": {
+    "creator": "0x5B834e71e2136ACFB90247005e35DE78Acc91864",
+    "alice": "0x6B8a21D51585c3cDD5f7A4c45AE9b1D167C5Fa73",
+    "bob": "0x992E842DB94f077E270FE79b83DF50C0ecD199Bd",
+    "carol": "0xfB2E09d00AA63f32165DC42635cA3A7978892eFC",
+    "dave": "0xba4D32BfE1e684ec41E58FBE0c8e19D017371332",
+    "eve": "0xB8476bDC47Ed2C53b91c45954169840588918aC6",
+    "frank": "0xA06822402d2dfe560b93137355C0dd13AB2c931A",
+    "grace": "0x96cd705Db5ea3c1BA3f4C35139b601F26BB1B724",
+    "stranger": "0xc94Cbb0A63bBD25E4F2695219cF6C7E041FAcA60"
+  },
+  "leafAddresses": {
+    "creator": "0x5b834e71e2136acfb90247005e35de78acc91864",
+    "alice": "0x6b8a21d51585c3cdd5f7a4c45ae9b1d167c5fa73",
+    "bob": "0x992e842db94f077e270fe79b83df50c0ecd199bd",
+    "carol": "0xfb2e09d00aa63f32165dc42635ca3a7978892efc",
+    "dave": "0xba4d32bfe1e684ec41e58fbe0c8e19d017371332",
+    "eve": "0xb8476bdc47ed2c53b91c45954169840588918ac6",
+    "frank": "0xa06822402d2dfe560b93137355c0dd13ab2c931a",
+    "grace": "0x96cd705db5ea3c1ba3f4c35139b601f26bb1b724",
+    "stranger": "0xc94cbb0a63bbd25e4f2695219cf6c7e041faca60"
+  },
+  "funding": {
+    "creator": {
+      "address": "0x5B834e71e2136ACFB90247005e35DE78Acc91864",
+      "funded_gen": 10000,
+      "fundTx": "0x9fd04c582fef0b5db4c3799484c06c5b3cbfddd448cabc1db8c3ea05decb19f1",
+      "balance_after_wei": "10000000000000000000000"
+    },
+    "alice": {
+      "address": "0x6B8a21D51585c3cDD5f7A4c45AE9b1D167C5Fa73",
+      "funded_gen": 10000,
+      "fundTx": "0x765db0783eb8e4ad8c12a8d00c8ce1493984abed1225a6761ca50c09611c57cd",
+      "balance_after_wei": "10000000000000000000000"
+    },
+    "bob": {
+      "address": "0x992E842DB94f077E270FE79b83DF50C0ecD199Bd",
+      "funded_gen": 10000,
+      "fundTx": "0x52f03b52bbc09d7c15a7915644679f16a02b93c0790b9dde08b52557174ec1dd",
+      "balance_after_wei": "10000000000000000000000"
+    },
+    "carol": {
+      "address": "0xfB2E09d00AA63f32165DC42635cA3A7978892eFC",
+      "funded_gen": 10000,
+      "fundTx": "0x71218a81abdb5ca23afde27a9a6045da9b04dc34b69361627e180045abb34242",
+      "balance_after_wei": "10000000000000000000000"
+    },
+    "dave": {
+      "address": "0xba4D32BfE1e684ec41E58FBE0c8e19D017371332",
+      "funded_gen": 10000,
+      "fundTx": "0xb8d6870985c90542b2e8bca99884c6eaf20c5e52472dd593b7af1693dcd7352a",
+      "balance_after_wei": "10000000000000000000000"
+    },
+    "eve": {
+      "address": "0xB8476bDC47Ed2C53b91c45954169840588918aC6",
+      "funded_gen": 10000,
+      "fundTx": "0x72e39d3c70129cfb48ba1580832755ddc61b271cf8ea71bb33478bc9d10cfffc",
+      "balance_after_wei": "10000000000000000000000"
+    },
+    "frank": {
+      "address": "0xA06822402d2dfe560b93137355C0dd13AB2c931A",
+      "funded_gen": 10000,
+      "fundTx": "0x4a18a02998929e83d7c3f2dfd63cefca323e4e872e3cfdc6c53ed0a3fa39f287",
+      "balance_after_wei": "10000000000000000000000"
+    },
+    "grace": {
+      "address": "0x96cd705Db5ea3c1BA3f4C35139b601F26BB1B724",
+      "funded_gen": 10000,
+      "fundTx": "0x886ef80143e5754948b892128ad15ef55505de98969306760ef9adb5cdcedfe0",
+      "balance_after_wei": "10000000000000000000000"
+    },
+    "stranger": {
+      "address": "0xc94Cbb0A63bBD25E4F2695219cF6C7E041FAcA60",
+      "funded_gen": 10000,
+      "fundTx": "0x913b11ea6cfd50fa308ebadaffd8c1495b9085d71c4a2e9c387271d446f498b2",
+      "balance_after_wei": "10000000000000000000000"
+    }
+  },
+  "failedPayableProbe": {
+    "label": "create_distribution with invalid root and 1 wei must fail",
+    "txHash": "0xb12e510499cf80630ff9af6e125a01cb34fcc053cc48f5939cde93a171191e23",
+    "value_wei": "1",
+    "expected_error": "root_must_be_64_lowercase_hex",
+    "receiptStatus": "FINALIZED",
+    "consensus": "MAJORITY_AGREE",
+    "execution": "ERROR",
+    "contract_balance_before_wei": "0",
+    "contract_balance_after_wei": "1",
+    "value_kept_wei": "1",
+    "value_kept": true,
+    "total_received_wei_after": "0",
+    "distribution_count_after": 0,
+    "note": "Failed payable KEPT its value in the contract; the stranded wei is carried explicitly in the final invariant (see finalReadbacks.stranded_wei).",
+    "preExistingStrandedWei": "0"
+  },
+  "distributions": [
+    {
+      "id": "0",
+      "label": "main",
+      "root": "f90f2acae5e59236a8998453962749dcbf670722486a23fd874fce7470366e38",
+      "expiry": 1794351258,
+      "funded_wei": "30000000000000000000",
+      "leaves": [
+        {
+          "name": "alice",
+          "address": "0x6b8a21d51585c3cdd5f7a4c45ae9b1d167c5fa73",
+          "amount_wei": "5000000000000000000",
+          "leaf_hash": "9d6779e1b56cf85f76adc15a65ed2cf478b2edb6bf1d09bad06bb662c0f8fb74",
+          "proof": [
+            {
+              "sibling": "10532608964b5465dd0768260ec052c6fb9bf18fb0bacca42d2b786ada579187",
+              "left": false
+            },
+            {
+              "sibling": "a864e804ed80c1705058aa56196ea1da2d10924f54761af5116742c2bc035ecc",
+              "left": false
+            }
+          ]
+        },
+        {
+          "name": "bob",
+          "address": "0x992e842db94f077e270fe79b83df50c0ecd199bd",
+          "amount_wei": "10000000000000000000",
+          "leaf_hash": "10532608964b5465dd0768260ec052c6fb9bf18fb0bacca42d2b786ada579187",
+          "proof": [
+            {
+              "sibling": "9d6779e1b56cf85f76adc15a65ed2cf478b2edb6bf1d09bad06bb662c0f8fb74",
+              "left": true
+            },
+            {
+              "sibling": "a864e804ed80c1705058aa56196ea1da2d10924f54761af5116742c2bc035ecc",
+              "left": false
+            }
+          ]
+        },
+        {
+          "name": "carol",
+          "address": "0xfb2e09d00aa63f32165dc42635ca3a7978892efc",
+          "amount_wei": "15000000000000000000",
+          "leaf_hash": "a864e804ed80c1705058aa56196ea1da2d10924f54761af5116742c2bc035ecc",
+          "proof": [
+            {
+              "sibling": "8880b583f839afc4fe691d61adda3b2a245ea66c88a2100e6f11d136dcaa2c12",
+              "left": true
+            }
+          ]
+        }
+      ],
+      "createTxHash": "0x97979d8a81b6cf1ce9c2d288bcd4e144f6a32b89dd5c0805178cdf12529f400f"
+    },
+    {
+      "id": "1",
+      "label": "short",
+      "root": "647783657c6a17d4bd61d2ba013f176884bcee73c0fd9d3f1cda0f8a70ca5334",
+      "expiry": 1794265758,
+      "funded_wei": "4000000000000000000",
+      "leaves": [
+        {
+          "name": "dave",
+          "address": "0xba4d32bfe1e684ec41e58fbe0c8e19d017371332",
+          "amount_wei": "4000000000000000000",
+          "leaf_hash": "647783657c6a17d4bd61d2ba013f176884bcee73c0fd9d3f1cda0f8a70ca5334",
+          "proof": []
+        }
+      ],
+      "createTxHash": "0x2c6678685dd2c739ae0695b46f1795e36fdad0a4fd495efcdfe69dbe1bfb5dea"
+    },
+    {
+      "id": "2",
+      "label": "underfunded",
+      "root": "223e4da245dd71b882071bf0cd222adc9df092b0559d9750f992c4e3adcd8e99",
+      "expiry": 1794265758,
+      "funded_wei": "12000000000000000000",
+      "leaves": [
+        {
+          "name": "eve",
+          "address": "0xb8476bdc47ed2c53b91c45954169840588918ac6",
+          "amount_wei": "10000000000000000000",
+          "leaf_hash": "3544ef19b849b596c562b93ec57ae61c824f1bbe3ec979ba91dcfc26aed9b3e7",
+          "proof": [
+            {
+              "sibling": "be1f3eb1ea23c36a0ad494fd2c840cbc42280ae76f07a3ac45bced992df32897",
+              "left": false
+            }
+          ]
+        },
+        {
+          "name": "frank",
+          "address": "0xa06822402d2dfe560b93137355c0dd13ab2c931a",
+          "amount_wei": "10000000000000000000",
+          "leaf_hash": "be1f3eb1ea23c36a0ad494fd2c840cbc42280ae76f07a3ac45bced992df32897",
+          "proof": [
+            {
+              "sibling": "3544ef19b849b596c562b93ec57ae61c824f1bbe3ec979ba91dcfc26aed9b3e7",
+              "left": true
+            }
+          ]
+        }
+      ],
+      "createTxHash": "0x9837a5a068b21575807b74ee1961d1316868d9c4b19a6f06629ac37bcf53ae7c"
+    },
+    {
+      "id": "3",
+      "label": "extendable",
+      "root": "61781b91b31d4b63ccab127827f7d61c3bb5a6a3dd79686243be7f7d55088070",
+      "expiry": 1794266658,
+      "funded_wei": "1000000000000000000",
+      "leaves": [
+        {
+          "name": "grace",
+          "address": "0x96cd705db5ea3c1ba3f4c35139b601f26bb1b724",
+          "amount_wei": "1000000000000000000",
+          "leaf_hash": "61781b91b31d4b63ccab127827f7d61c3bb5a6a3dd79686243be7f7d55088070",
+          "proof": []
+        }
+      ],
+      "createTxHash": "0xac84132c1506b751c3298ff31053f7ae8ef5ef1ef25394c78949d41129157a95"
+    }
+  ],
+  "transactions": [
+    {
+      "label": "probe-failing-payable-create",
+      "method": "create_distribution",
+      "args": [
+        "gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg",
+        "1794268458",
+        "probe"
+      ],
+      "sender": "0x5B834e71e2136ACFB90247005e35DE78Acc91864",
+      "value_wei": "1",
+      "txHash": "0xb12e510499cf80630ff9af6e125a01cb34fcc053cc48f5939cde93a171191e23",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "expected_error": "root_must_be_64_lowercase_hex",
+      "stderr_excerpt": "EXPECTED: root_must_be_64_lowercase_hex"
+    },
+    {
+      "label": "create-D0-main",
+      "method": "create_distribution",
+      "args": [
+        "f90f2acae5e59236a8998453962749dcbf670722486a23fd874fce7470366e38",
+        "1794351258",
+        "main"
+      ],
+      "sender": "0x5B834e71e2136ACFB90247005e35DE78Acc91864",
+      "value_wei": "30000000000000000000",
+      "txHash": "0x97979d8a81b6cf1ce9c2d288bcd4e144f6a32b89dd5c0805178cdf12529f400f",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"creator\": \"0x5b834e71e2136acfb90247005e35de78acc91864\", \"expiry\": \"1794351258\", \"funded_wei\": \"30000000000000000000\", \"id\": \"0\", \"label\": \"main\", \"remaining_wei\": \"30000000000000000000\", \"root\": \"f90f2acae5e59236a8998453962749dcbf670722486a23fd874fce7470366e38\", \"status\": \"ACTIVE\"}"
+    },
+    {
+      "label": "create-D1-short",
+      "method": "create_distribution",
+      "args": [
+        "647783657c6a17d4bd61d2ba013f176884bcee73c0fd9d3f1cda0f8a70ca5334",
+        "1794265758",
+        "short"
+      ],
+      "sender": "0x5B834e71e2136ACFB90247005e35DE78Acc91864",
+      "value_wei": "4000000000000000000",
+      "txHash": "0x2c6678685dd2c739ae0695b46f1795e36fdad0a4fd495efcdfe69dbe1bfb5dea",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"creator\": \"0x5b834e71e2136acfb90247005e35de78acc91864\", \"expiry\": \"1794265758\", \"funded_wei\": \"4000000000000000000\", \"id\": \"1\", \"label\": \"short\", \"remaining_wei\": \"4000000000000000000\", \"root\": \"647783657c6a17d4bd61d2ba013f176884bcee73c0fd9d3f1cda0f8a70ca5334\", \"status\": \"ACTIVE\"}"
+    },
+    {
+      "label": "create-D2-underfunded",
+      "method": "create_distribution",
+      "args": [
+        "223e4da245dd71b882071bf0cd222adc9df092b0559d9750f992c4e3adcd8e99",
+        "1794265758",
+        "underfunded"
+      ],
+      "sender": "0x5B834e71e2136ACFB90247005e35DE78Acc91864",
+      "value_wei": "12000000000000000000",
+      "txHash": "0x9837a5a068b21575807b74ee1961d1316868d9c4b19a6f06629ac37bcf53ae7c",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"creator\": \"0x5b834e71e2136acfb90247005e35de78acc91864\", \"expiry\": \"1794265758\", \"funded_wei\": \"12000000000000000000\", \"id\": \"2\", \"label\": \"underfunded\", \"remaining_wei\": \"12000000000000000000\", \"root\": \"223e4da245dd71b882071bf0cd222adc9df092b0559d9750f992c4e3adcd8e99\", \"status\": \"ACTIVE\"}"
+    },
+    {
+      "label": "create-D3-extendable",
+      "method": "create_distribution",
+      "args": [
+        "61781b91b31d4b63ccab127827f7d61c3bb5a6a3dd79686243be7f7d55088070",
+        "1794265758",
+        "extendable"
+      ],
+      "sender": "0x5B834e71e2136ACFB90247005e35DE78Acc91864",
+      "value_wei": "1000000000000000000",
+      "txHash": "0xac84132c1506b751c3298ff31053f7ae8ef5ef1ef25394c78949d41129157a95",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"creator\": \"0x5b834e71e2136acfb90247005e35de78acc91864\", \"expiry\": \"1794265758\", \"funded_wei\": \"1000000000000000000\", \"id\": \"3\", \"label\": \"extendable\", \"remaining_wei\": \"1000000000000000000\", \"root\": \"61781b91b31d4b63ccab127827f7d61c3bb5a6a3dd79686243be7f7d55088070\", \"status\": \"ACTIVE\"}"
+    },
+    {
+      "label": "adversarial-stranger-extend-D3 (attempt 1)",
+      "method": "extend_distribution",
+      "args": [
+        "3",
+        "1794265758"
+      ],
+      "sender": "0xc94Cbb0A63bBD25E4F2695219cF6C7E041FAcA60",
+      "value_wei": "0",
+      "txHash": "0x2865ae1f52482b371058e331abf7efecc32cc16edf0bf72496b7b3346e411888",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "expected_error": "only_creator_can_extend",
+      "stderr_excerpt": "EXPECTED: only_creator_can_extend"
+    },
+    {
+      "label": "extend-D3-creator",
+      "method": "extend_distribution",
+      "args": [
+        "3",
+        "1794266658"
+      ],
+      "sender": "0x5B834e71e2136ACFB90247005e35DE78Acc91864",
+      "value_wei": "0",
+      "txHash": "0x336662ecd81acfcdcb114d8c5d269b0fa29ee8ac7ed03b85244b3cd90ca8c672",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"distribution_id\": \"3\", \"expiry\": \"1794266658\", \"status\": \"ACTIVE\"}"
+    },
+    {
+      "label": "claim-D0-alice (from alice)",
+      "method": "claim",
+      "args": [
+        "0",
+        "0x6b8a21d51585c3cdd5f7a4c45ae9b1d167c5fa73",
+        "5000000000000000000",
+        "[{\"sibling\":\"10532608964b5465dd0768260ec052c6fb9bf18fb0bacca42d2b786ada579187\",\"left\":false},{\"sibling\":\"a864e804ed80c1705058aa56196ea1da2d10924f54761af5116742c2bc035ecc\",\"left\":false}]"
+      ],
+      "sender": "0x6B8a21D51585c3cDD5f7A4c45AE9b1D167C5Fa73",
+      "value_wei": "0",
+      "txHash": "0xb6f5d35521c29071c70f9b64243c2e1a528e11171c5dad86ec074cc78ef2d535",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"address\": \"0x6b8a21d51585c3cdd5f7a4c45ae9b1d167c5fa73\", \"amount_wei\": \"5000000000000000000\", \"claimed_count\": 1, \"claimed_total_wei\": \"5000000000000000000\", \"computed_root\": \"f90f2acae5e59236a8998453962749dcbf670722486a23fd874fce7470366e38\", \"distribution_id\": \"0\", \"leaf_hash\": \"9d6779e1b56cf85f76adc15a65ed2cf478b2edb6bf1d09bad06bb662c0f8fb74\", \"remaining_wei\": \"25000000000000000000\"}"
+    },
+    {
+      "label": "claim-D0-bob (from stranger)",
+      "method": "claim",
+      "args": [
+        "0",
+        "0x992e842db94f077e270fe79b83df50c0ecd199bd",
+        "10000000000000000000",
+        "[{\"sibling\":\"9d6779e1b56cf85f76adc15a65ed2cf478b2edb6bf1d09bad06bb662c0f8fb74\",\"left\":true},{\"sibling\":\"a864e804ed80c1705058aa56196ea1da2d10924f54761af5116742c2bc035ecc\",\"left\":false}]"
+      ],
+      "sender": "0xc94Cbb0A63bBD25E4F2695219cF6C7E041FAcA60",
+      "value_wei": "0",
+      "txHash": "0xac6f2950de025707b157336e18f594ed687616224bfc2c872e940212e7f908e4",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"address\": \"0x992e842db94f077e270fe79b83df50c0ecd199bd\", \"amount_wei\": \"10000000000000000000\", \"claimed_count\": 2, \"claimed_total_wei\": \"15000000000000000000\", \"computed_root\": \"f90f2acae5e59236a8998453962749dcbf670722486a23fd874fce7470366e38\", \"distribution_id\": \"0\", \"leaf_hash\": \"10532608964b5465dd0768260ec052c6fb9bf18fb0bacca42d2b786ada579187\", \"remaining_wei\": \"15000000000000000000\"}"
+    },
+    {
+      "label": "claim-D0-carol (from carol)",
+      "method": "claim",
+      "args": [
+        "0",
+        "0xfb2e09d00aa63f32165dc42635ca3a7978892efc",
+        "15000000000000000000",
+        "[{\"sibling\":\"8880b583f839afc4fe691d61adda3b2a245ea66c88a2100e6f11d136dcaa2c12\",\"left\":true}]"
+      ],
+      "sender": "0xfB2E09d00AA63f32165DC42635cA3A7978892eFC",
+      "value_wei": "0",
+      "txHash": "0xaf321fd5deda2028ea501151792838eb08cf6230bfdf4fc4a08143ea2b94bae6",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"address\": \"0xfb2e09d00aa63f32165dc42635ca3a7978892efc\", \"amount_wei\": \"15000000000000000000\", \"claimed_count\": 3, \"claimed_total_wei\": \"30000000000000000000\", \"computed_root\": \"f90f2acae5e59236a8998453962749dcbf670722486a23fd874fce7470366e38\", \"distribution_id\": \"0\", \"leaf_hash\": \"a864e804ed80c1705058aa56196ea1da2d10924f54761af5116742c2bc035ecc\", \"remaining_wei\": \"0\"}"
+    },
+    {
+      "label": "adversarial-double-claim-alice (attempt 1)",
+      "method": "claim",
+      "args": [
+        "0",
+        "0x6b8a21d51585c3cdd5f7a4c45ae9b1d167c5fa73",
+        "5000000000000000000",
+        "[{\"sibling\":\"10532608964b5465dd0768260ec052c6fb9bf18fb0bacca42d2b786ada579187\",\"left\":false},{\"sibling\":\"a864e804ed80c1705058aa56196ea1da2d10924f54761af5116742c2bc035ecc\",\"left\":false}]"
+      ],
+      "sender": "0x6B8a21D51585c3cDD5f7A4c45AE9b1D167C5Fa73",
+      "value_wei": "0",
+      "txHash": "0x8a4b483113e5612fee07b4cc9bf510df34100ae2d054f8e0180b84b8303be513",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "expected_error": "leaf_already_claimed",
+      "stderr_excerpt": "EXPECTED: leaf_already_claimed"
+    },
+    {
+      "label": "adversarial-tampered-proof-frank (attempt 1)",
+      "method": "claim",
+      "args": [
+        "2",
+        "0xa06822402d2dfe560b93137355c0dd13ab2c931a",
+        "10000000000000000000",
+        "[{\"sibling\":\"0544ef19b849b596c562b93ec57ae61c824f1bbe3ec979ba91dcfc26aed9b3e7\",\"left\":true}]"
+      ],
+      "sender": "0xA06822402d2dfe560b93137355C0dd13AB2c931A",
+      "value_wei": "0",
+      "txHash": "0xe52368dc5abe435cc1cf82b8ddde082c7bd0dce55cd6218a2996e12209c6b214",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "expected_error": "proof_does_not_match_root",
+      "stderr_excerpt": "EXPECTED: proof_does_not_match_root"
+    },
+    {
+      "label": "adversarial-wrong-amount-frank (attempt 1)",
+      "method": "claim",
+      "args": [
+        "2",
+        "0xa06822402d2dfe560b93137355c0dd13ab2c931a",
+        "11000000000000000000",
+        "[{\"sibling\":\"3544ef19b849b596c562b93ec57ae61c824f1bbe3ec979ba91dcfc26aed9b3e7\",\"left\":true}]"
+      ],
+      "sender": "0xA06822402d2dfe560b93137355C0dd13AB2c931A",
+      "value_wei": "0",
+      "txHash": "0x30936be53ad899b289ddb1408169b293be0594db16a0b0eeab30ffcbf8063dd8",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "expected_error": "proof_does_not_match_root",
+      "stderr_excerpt": "EXPECTED: proof_does_not_match_root"
+    },
+    {
+      "label": "adversarial-checksummed-address-bob (attempt 1)",
+      "method": "claim",
+      "args": [
+        "0",
+        "0xBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+        "10000000000000000000",
+        "[{\"sibling\":\"9d6779e1b56cf85f76adc15a65ed2cf478b2edb6bf1d09bad06bb662c0f8fb74\",\"left\":true},{\"sibling\":\"a864e804ed80c1705058aa56196ea1da2d10924f54761af5116742c2bc035ecc\",\"left\":false}]"
+      ],
+      "sender": "0x992E842DB94f077E270FE79b83DF50C0ecD199Bd",
+      "value_wei": "0",
+      "txHash": "0x9ad7ae3a730e8e21c2a19c76642687100ac84c6e2f50f9eb6cbece1f768d30ac",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "expected_error": "leaf_address_must_be_lowercase_0x_hex",
+      "stderr_excerpt": "EXPECTED: leaf_address_must_be_lowercase_0x_hex"
+    },
+    {
+      "label": "adversarial-proof-too-long (attempt 1)",
+      "method": "claim",
+      "args": [
+        "2",
+        "0xa06822402d2dfe560b93137355c0dd13ab2c931a",
+        "10000000000000000000",
+        "[{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false},{\"sibling\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"left\":false}]"
+      ],
+      "sender": "0xA06822402d2dfe560b93137355C0dd13AB2c931A",
+      "value_wei": "0",
+      "txHash": "0x7625bf115b69fe72deb65107255104b0ffccb683cd9de3042ce81f51903a4d3c",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "expected_error": "proof_too_long",
+      "stderr_excerpt": "EXPECTED: proof_too_long"
+    },
+    {
+      "label": "adversarial-stranger-withdraw (attempt 1)",
+      "method": "withdraw_payout",
+      "args": [],
+      "sender": "0xc94Cbb0A63bBD25E4F2695219cF6C7E041FAcA60",
+      "value_wei": "0",
+      "txHash": "0xce858b4c2ffec4ea7a5019650ae774ac8d6a4688f8c6ca825c0b4339deb72f7c",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "expected_error": "no_credit_to_withdraw",
+      "stderr_excerpt": "EXPECTED: no_credit_to_withdraw"
+    },
+    {
+      "label": "claim-D2-eve (from eve)",
+      "method": "claim",
+      "args": [
+        "2",
+        "0xb8476bdc47ed2c53b91c45954169840588918ac6",
+        "10000000000000000000",
+        "[{\"sibling\":\"be1f3eb1ea23c36a0ad494fd2c840cbc42280ae76f07a3ac45bced992df32897\",\"left\":false}]"
+      ],
+      "sender": "0xB8476bDC47Ed2C53b91c45954169840588918aC6",
+      "value_wei": "0",
+      "txHash": "0xd9f66be1b4e4347b0c0417bff082c5064971bb03b56fa0c67cfacca65558d061",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"address\": \"0xb8476bdc47ed2c53b91c45954169840588918ac6\", \"amount_wei\": \"10000000000000000000\", \"claimed_count\": 1, \"claimed_total_wei\": \"10000000000000000000\", \"computed_root\": \"223e4da245dd71b882071bf0cd222adc9df092b0559d9750f992c4e3adcd8e99\", \"distribution_id\": \"2\", \"leaf_hash\": \"3544ef19b849b596c562b93ec57ae61c824f1bbe3ec979ba91dcfc26aed9b3e7\", \"remaining_wei\": \"2000000000000000000\"}"
+    },
+    {
+      "label": "adversarial-underfunded-frank-claim (attempt 1)",
+      "method": "claim",
+      "args": [
+        "2",
+        "0xa06822402d2dfe560b93137355c0dd13ab2c931a",
+        "10000000000000000000",
+        "[{\"sibling\":\"3544ef19b849b596c562b93ec57ae61c824f1bbe3ec979ba91dcfc26aed9b3e7\",\"left\":true}]"
+      ],
+      "sender": "0xA06822402d2dfe560b93137355C0dd13AB2c931A",
+      "value_wei": "0",
+      "txHash": "0xf938a2110e770b8f643c7ea8821f0d3057e00443650dcfac739b7ee36753dc32",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "expected_error": "insufficient_escrow",
+      "stderr_excerpt": "EXPECTED: insufficient_escrow"
+    },
+    {
+      "label": "claim-D3-grace (from grace)",
+      "method": "claim",
+      "args": [
+        "3",
+        "0x96cd705db5ea3c1ba3f4c35139b601f26bb1b724",
+        "1000000000000000000",
+        "[]"
+      ],
+      "sender": "0x96cd705Db5ea3c1BA3f4C35139b601F26BB1B724",
+      "value_wei": "0",
+      "txHash": "0xb1a45db01c370bfb0aaefef08019c5cc04e8d96905f0d8bf1d1ab97489418ff3",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"address\": \"0x96cd705db5ea3c1ba3f4c35139b601f26bb1b724\", \"amount_wei\": \"1000000000000000000\", \"claimed_count\": 1, \"claimed_total_wei\": \"1000000000000000000\", \"computed_root\": \"61781b91b31d4b63ccab127827f7d61c3bb5a6a3dd79686243be7f7d55088070\", \"distribution_id\": \"3\", \"leaf_hash\": \"61781b91b31d4b63ccab127827f7d61c3bb5a6a3dd79686243be7f7d55088070\", \"remaining_wei\": \"0\"}"
+    },
+    {
+      "label": "withdraw-alice",
+      "method": "withdraw_payout",
+      "args": [],
+      "sender": "0x6B8a21D51585c3cDD5f7A4c45AE9b1D167C5Fa73",
+      "value_wei": "0",
+      "txHash": "0x630b08b12b49cc6aece8b9ec256a4afc5f0a528a185c7262260836f469563656",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"address\": \"0x6b8a21d51585c3cdd5f7a4c45ae9b1d167c5fa73\", \"total_withdrawn_wei\": \"5000000000000000000\", \"withdrawn_wei\": \"5000000000000000000\"}"
+    },
+    {
+      "label": "withdraw-bob",
+      "method": "withdraw_payout",
+      "args": [],
+      "sender": "0x992E842DB94f077E270FE79b83DF50C0ecD199Bd",
+      "value_wei": "0",
+      "txHash": "0x1911c334119e316b7ca512e48cd8b8e3d78fcd0028056a591aab808ea8351744",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"address\": \"0x992e842db94f077e270fe79b83df50c0ecd199bd\", \"total_withdrawn_wei\": \"15000000000000000000\", \"withdrawn_wei\": \"10000000000000000000\"}"
+    },
+    {
+      "label": "withdraw-carol",
+      "method": "withdraw_payout",
+      "args": [],
+      "sender": "0xfB2E09d00AA63f32165DC42635cA3A7978892eFC",
+      "value_wei": "0",
+      "txHash": "0x04741f67b2e9de229bb1c7be39d948a5b6f754558f28127e48d417af8207b407",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"address\": \"0xfb2e09d00aa63f32165dc42635ca3a7978892efc\", \"total_withdrawn_wei\": \"30000000000000000000\", \"withdrawn_wei\": \"15000000000000000000\"}"
+    },
+    {
+      "label": "withdraw-eve",
+      "method": "withdraw_payout",
+      "args": [],
+      "sender": "0xB8476bDC47Ed2C53b91c45954169840588918aC6",
+      "value_wei": "0",
+      "txHash": "0x47ded398c9b8428582ebc68b0f63e9d7a70c2a7e3bfdee7e8fa077d8d9984967",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"address\": \"0xb8476bdc47ed2c53b91c45954169840588918ac6\", \"total_withdrawn_wei\": \"40000000000000000000\", \"withdrawn_wei\": \"10000000000000000000\"}"
+    },
+    {
+      "label": "withdraw-grace",
+      "method": "withdraw_payout",
+      "args": [],
+      "sender": "0x96cd705Db5ea3c1BA3f4C35139b601F26BB1B724",
+      "value_wei": "0",
+      "txHash": "0x679ef0c398f06dbfed28e76f284522cc6d9cb13340935d9747b11bb9f8fc1de8",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"address\": \"0x96cd705db5ea3c1ba3f4c35139b601f26bb1b724\", \"total_withdrawn_wei\": \"41000000000000000000\", \"withdrawn_wei\": \"1000000000000000000\"}"
+    },
+    {
+      "label": "adversarial-expired-claim-dave (attempt 1)",
+      "method": "claim",
+      "args": [
+        "1",
+        "0xba4d32bfe1e684ec41e58fbe0c8e19d017371332",
+        "4000000000000000000",
+        "[]"
+      ],
+      "sender": "0xba4D32BfE1e684ec41E58FBE0c8e19D017371332",
+      "value_wei": "0",
+      "txHash": "0x1d709576296531b5b422a35a31b35489f839db711cca17d14b1c55c3e346e951",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "expected_error": "distribution_expired",
+      "stderr_excerpt": "EXPECTED: distribution_expired"
+    },
+    {
+      "label": "adversarial-stranger-reclaim-D1 (attempt 1)",
+      "method": "reclaim_distribution",
+      "args": [
+        "1"
+      ],
+      "sender": "0xc94Cbb0A63bBD25E4F2695219cF6C7E041FAcA60",
+      "value_wei": "0",
+      "txHash": "0xea1d07900e437d7cfa4b05bf3c22d5f2a084ce7e75fb689c082cd457e60a1fd4",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "expected_error": "only_creator_can_reclaim",
+      "stderr_excerpt": "EXPECTED: only_creator_can_reclaim"
+    },
+    {
+      "label": "reclaim-D1-creator",
+      "method": "reclaim_distribution",
+      "args": [
+        "1"
+      ],
+      "sender": "0x5B834e71e2136ACFB90247005e35DE78Acc91864",
+      "value_wei": "0",
+      "txHash": "0xa48afbb7669812e1616edb76abc0767d88db139fc90f805c2dbbb3e32fd7ccf9",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"creator\": \"0x5b834e71e2136acfb90247005e35de78acc91864\", \"distribution_id\": \"1\", \"reclaimed_wei\": \"4000000000000000000\", \"status\": \"RECLAIMED\"}"
+    },
+    {
+      "label": "reclaim-D2-creator",
+      "method": "reclaim_distribution",
+      "args": [
+        "2"
+      ],
+      "sender": "0x5B834e71e2136ACFB90247005e35DE78Acc91864",
+      "value_wei": "0",
+      "txHash": "0xfacb9538a391647978a7c1284e1b4491c5e77bc8f0d9d16c3190bfbd9e9a003e",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"creator\": \"0x5b834e71e2136acfb90247005e35de78acc91864\", \"distribution_id\": \"2\", \"reclaimed_wei\": \"2000000000000000000\", \"status\": \"RECLAIMED\"}"
+    },
+    {
+      "label": "withdraw-creator",
+      "method": "withdraw_payout",
+      "args": [],
+      "sender": "0x5B834e71e2136ACFB90247005e35DE78Acc91864",
+      "value_wei": "0",
+      "txHash": "0x19532a7139b96d26c4a63cbaf8559740edcdcb3e984d2a9bda5492d3cc4cd6ba",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"address\": \"0x5b834e71e2136acfb90247005e35de78acc91864\", \"total_withdrawn_wei\": \"47000000000000000000\", \"withdrawn_wei\": \"6000000000000000000\"}"
+    },
+    {
+      "label": "reclaim-D3-creator",
+      "method": "reclaim_distribution",
+      "args": [
+        "3"
+      ],
+      "sender": "0x5B834e71e2136ACFB90247005e35DE78Acc91864",
+      "value_wei": "0",
+      "txHash": "0x659e34996c2db336b9e80c820a5f2ed87713cda721243825ffa19380df3aedc4",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"creator\": \"0x5b834e71e2136acfb90247005e35de78acc91864\", \"distribution_id\": \"3\", \"reclaimed_wei\": \"0\", \"status\": \"RECLAIMED\"}"
+    }
+  ],
+  "finalReadbacks": {
+    "distributions": [
+      {
+        "claimed": {
+          "10532608964b5465dd0768260ec052c6fb9bf18fb0bacca42d2b786ada579187": true,
+          "9d6779e1b56cf85f76adc15a65ed2cf478b2edb6bf1d09bad06bb662c0f8fb74": true,
+          "a864e804ed80c1705058aa56196ea1da2d10924f54761af5116742c2bc035ecc": true
+        },
+        "claimed_count": 3,
+        "claimed_total_wei": "30000000000000000000",
+        "creator": "0x5b834e71e2136acfb90247005e35de78acc91864",
+        "expiry": "1794351258",
+        "funded_wei": "30000000000000000000",
+        "id": "0",
+        "label": "main",
+        "remaining_wei": "0",
+        "root": "f90f2acae5e59236a8998453962749dcbf670722486a23fd874fce7470366e38",
+        "status": "ACTIVE"
+      },
+      {
+        "claimed": {},
+        "claimed_count": 0,
+        "claimed_total_wei": "0",
+        "creator": "0x5b834e71e2136acfb90247005e35de78acc91864",
+        "expiry": "1794265758",
+        "funded_wei": "4000000000000000000",
+        "id": "1",
+        "label": "short",
+        "remaining_wei": "0",
+        "root": "647783657c6a17d4bd61d2ba013f176884bcee73c0fd9d3f1cda0f8a70ca5334",
+        "status": "RECLAIMED"
+      },
+      {
+        "claimed": {
+          "3544ef19b849b596c562b93ec57ae61c824f1bbe3ec979ba91dcfc26aed9b3e7": true
+        },
+        "claimed_count": 1,
+        "claimed_total_wei": "10000000000000000000",
+        "creator": "0x5b834e71e2136acfb90247005e35de78acc91864",
+        "expiry": "1794265758",
+        "funded_wei": "12000000000000000000",
+        "id": "2",
+        "label": "underfunded",
+        "remaining_wei": "0",
+        "root": "223e4da245dd71b882071bf0cd222adc9df092b0559d9750f992c4e3adcd8e99",
+        "status": "RECLAIMED"
+      },
+      {
+        "claimed": {
+          "61781b91b31d4b63ccab127827f7d61c3bb5a6a3dd79686243be7f7d55088070": true
+        },
+        "claimed_count": 1,
+        "claimed_total_wei": "1000000000000000000",
+        "creator": "0x5b834e71e2136acfb90247005e35de78acc91864",
+        "expiry": "1794266658",
+        "funded_wei": "1000000000000000000",
+        "id": "3",
+        "label": "extendable",
+        "remaining_wei": "0",
+        "root": "61781b91b31d4b63ccab127827f7d61c3bb5a6a3dd79686243be7f7d55088070",
+        "status": "RECLAIMED"
+      }
+    ],
+    "totals": {
+      "accounted_wei": "47000000000000000000",
+      "balance_matches_held": false,
+      "contract_balance_wei": "1",
+      "credits_outstanding_wei": "0",
+      "distribution_count": 4,
+      "escrow_locked_wei": "0",
+      "invariant_ok": true,
+      "total_received_wei": "47000000000000000000",
+      "total_withdrawn_wei": "47000000000000000000"
+    },
+    "contractBalanceWei": "1",
+    "strandedWei": "1",
+    "eoaBalancesWei": {
+      "creator": "9958999999999999999999",
+      "alice": "10005000000000000000000",
+      "bob": "10010000000000000000000",
+      "carol": "10015000000000000000000",
+      "dave": "10000000000000000000000",
+      "eve": "10010000000000000000000",
+      "frank": "10000000000000000000000",
+      "grace": "10001000000000000000000",
+      "stranger": "10000000000000000000000"
+    },
+    "expectedEoaBalancesWei": {
+      "creator": "9958999999999999999999",
+      "alice": "10005000000000000000000",
+      "bob": "10010000000000000000000",
+      "carol": "10015000000000000000000",
+      "dave": "10000000000000000000000",
+      "eve": "10010000000000000000000",
+      "frank": "10000000000000000000000",
+      "grace": "10001000000000000000000",
+      "stranger": "10000000000000000000000"
+    },
+    "readBackAt": "2026-11-09T23:25:25.939Z"
+  },
+  "invariant": {
+    "received_wei": "47000000000000000000",
+    "withdrawn_wei": "47000000000000000000",
+    "credits_outstanding_wei": "0",
+    "escrow_locked_wei": "0",
+    "accounted_wei": "47000000000000000000",
+    "contract_balance_wei": "1",
+    "stranded_wei": "1",
+    "invariant_ok": true,
+    "balance_matches_held_plus_stranded": true
+  },
+  "generatedAt": "2026-11-09T23:25:25.939Z"
+}

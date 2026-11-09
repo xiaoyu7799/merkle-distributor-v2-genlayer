@@ -1,0 +1,16 @@
+{
+  "network": "Stable Studionet",
+  "chainId": 61999,
+  "rpcUrl": "https://studio.genlayer.com/api",
+  "explorer": "https://explorer-studio.genlayer.com/address/0x062E5A1ee60fc61Bc37aCEC24A5fB23F350968ea",
+  "studio": "https://studio.genlayer.com/?import-contract=0x062E5A1ee60fc61Bc37aCEC24A5fB23F350968ea",
+  "contractAddress": "0x062E5A1ee60fc61Bc37aCEC24A5fB23F350968ea",
+  "deployTxHash": "0xbc3fd29add69d23b92d54edddcede064346af57a265619bf7b0aac20fbf1a989",
+  "deployer": "0x6823c22a6FF59DaBbCBF3e99590f9BFbC7B673D5",
+  "contractFile": "contracts/merkle_distributor.py",
+  "contractSha256": "56885b49f1679ec6166450cbbeb9eded2e10549dadd2d2214cb861a6360ee101",
+  "deployedCodeSha256": "56885b49f1679ec6166450cbbeb9eded2e10549dadd2d2214cb861a6360ee101",
+  "deployedCodeMatchesSource": true,
+  "deployedAt": "2026-11-09T22:54:13.875Z",
+  "receiptStatus": "FINALIZED"
+}

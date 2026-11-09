@@ -1,0 +1,1 @@
+{"dependencies":{"genlayer-js":"1.1.8"},"name":"merkle-distributor-v2-genlayer","private":true,"scripts":{"deploy":"node scripts/deploy.mjs","flow":"node scripts/flow.mjs","test":"python3 tests/test_local.py","verify":"node scripts/verify.mjs"},"type":"module","version":"1.0.0"}
